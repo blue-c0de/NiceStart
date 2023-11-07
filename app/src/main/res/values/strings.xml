@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">NiceStart</string>
+
+    <!-- LOGIN -->
+    <string name="girl">Una chica sonriendo</string>
+    <string name="rayo">Logo de un Rayo</string>
+    <string name="till1">Username</string>
+    <string name="till2">Password</string>
+    <string name="button1">LOGIN</string>
+    <string name="button2">SIGNUP</string>
 </resources>
