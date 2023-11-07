@@ -8,4 +8,12 @@
     <string name="till2">Password</string>
     <string name="button1">LOGIN</string>
     <string name="button2">SIGNUP</string>
+
+    <!-- REGISTER -->
+    <string name="hipman">Un chico sonriendo</string>
+    <string name="name">Name</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="password2">Confirm Password</string>
+    <string name="ok">OK</string>
 </resources>
