@@ -2,30 +2,41 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- android:icon: EL ICONO DE LA APP -->
+    <!-- android:roundIcon: EL LOGO QUE APARECE UNOS SEGUNDOS -->
+    <!-- android:theme: POR DETERMINADO DEJAMOS QUE TODOS TENGAN EL TEMA CON ACTION BAR -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/beso"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/beso_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NiceStart"
-        tools:targetApi="31">
+        android:theme="@style/Theme.NiceStart.Light.ActionBar"
+        tools:targetApi="34">
 
+        <!-- android:theme: LO ADQUIERE DEL APPLICATION -->
+        <!-- parentActivityName: DEFINE EL PADRE PARA CUANDO VOLVAMOS ATRAS -->
         <activity
-            android:name=".MainActivity"
-            android:exported="false"/>
+            android:name=".Register"
+            android:parentActivityName=".Login"
+            android:exported="false" />
 
+        <!-- <intent-filter>: FORZAMOS QUE LANCE PRIMERO EL ACTIVITY QUE LO TENGA -->
+        <!-- android:theme: EN LOGIN LANZAMOS EL TEMA SIN ACTION BAR -->
         <activity
+            android:theme="@style/Theme.NiceStart.Light.NoActionBar"
             android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
 </manifest>

@@ -1,7 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.NiceStart" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
+    <!-- TEMA OSCURO CON BARRA -->
+    <style name="Theme.NiceStart.Dark.ActionBar" parent="Theme.Material3.Dark">
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <!-- TEMA OSCURO SIN BARRA -->
+    <style name="Theme.NiceStart.Dark.NoActionBar" parent="Theme.Material3.Dark.NoActionBar">
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
 </resources>
