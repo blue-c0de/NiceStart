@@ -58,7 +58,7 @@
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorSmash"
-            android:text="@string/smash"
+            android:text="@string/pass"
             android:textColor="@android:color/white" />
 
         <Button
@@ -68,7 +68,7 @@
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorPass"
-            android:text="@string/pass"
+            android:text="@string/smash"
             android:textColor="@android:color/white" />
     </LinearLayout>
 

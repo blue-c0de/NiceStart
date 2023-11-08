@@ -52,8 +52,10 @@
 
         <ImageView
             android:id="@+id/imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             style="@style/img_main"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/man" />
     </LinearLayout>
 
     <LinearLayout
@@ -78,7 +80,9 @@
         <ImageView
             android:id="@+id/imageView2"
             style="@style/img_main"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/woman"/>
     </LinearLayout>
 
     <LinearLayout
@@ -102,7 +106,9 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            tools:srcCompat="@tools:sample/avatars"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/dog"
             style="@style/img_main" />
     </LinearLayout>
 
@@ -112,5 +118,4 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.3" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
