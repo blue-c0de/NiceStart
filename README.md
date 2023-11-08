@@ -14,6 +14,8 @@ NiceStart es una aplicación Android para la autenticación de usuarios.
 ### Capturas
 ![Pantalla Login](img/login.png)
 ![Pantalla Register](img/register.png)
+![Pantalla Main](img/main.png)
+![Pantalla Tinder](img/tinder.png)
 
 ### Estilo
 Hemos personalizado la apariencia de la aplicación usando estilos y temas definidos en `res/values/styles.xml`. Para más detalles, por favor revisa el código y comentarios en las actividades correspondientes.
@@ -35,6 +37,8 @@ This is the Nicestart project, an Android application for user authentication.
 ### Screenshots
 ![Login Screen](img/login.png)
 ![Register Screen](img/register.png)
+![Pantalla Main](img/main.png)
+![Pantalla Tinder](img/tinder.png)
 
 ### Styling
 We have customized the app's appearance using styles and themes defined in `res/values/styles.xml`. For more details, please check the code and comments in the corresponding activities.
