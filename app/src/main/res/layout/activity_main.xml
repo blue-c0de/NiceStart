@@ -46,15 +46,15 @@
             android:id="@+id/button"
             style="@style/buttonAll"
             android:backgroundTint="@color/celeste"
-            android:fontFamily="@font/varela_round"
             android:onClick="openBoyTinder"
             android:text="@string/gen2" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
             style="@style/img_main"
+
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:src="@drawable/man" />
     </LinearLayout>
 
@@ -73,15 +73,15 @@
             android:id="@+id/button2"
             style="@style/buttonAll"
             android:backgroundTint="@color/rosa"
-            android:fontFamily="@font/varela_round"
             android:onClick="openGirlTinder"
             android:text="@string/gen1" />
 
         <ImageView
             android:id="@+id/imageView2"
+
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             style="@style/img_main"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
             android:src="@drawable/woman"/>
     </LinearLayout>
 
@@ -100,14 +100,13 @@
             android:id="@+id/button3"
             style="@style/buttonAll"
             android:backgroundTint="@color/crema"
-            android:fontFamily="@font/varela_round"
             android:onClick="openBothTinder"
             android:text="@string/gen3" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:src="@drawable/dog"
             style="@style/img_main" />
     </LinearLayout>
