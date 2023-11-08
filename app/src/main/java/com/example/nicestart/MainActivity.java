@@ -17,17 +17,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+            setContentView(R.layout.activity_main_land);
+        } else {
+            setContentView(R.layout.activity_main);
+        }
 
         chico = findViewById(R.id.imageView);
         chica = findViewById(R.id.imageView2);
         ambos = findViewById(R.id.imageView3);
-
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
-            chico.setImageResource(R.drawable.man_small);
-            chica.setImageResource(R.drawable.woman_small);
-            ambos.setImageResource(R.drawable.dog_small);
-        }
     }
 
     public void openBoyTinder(View view){

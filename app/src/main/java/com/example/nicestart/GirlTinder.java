@@ -1,5 +1,6 @@
 package com.example.nicestart;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +25,11 @@ public class GirlTinder extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_girltinder);
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+            setContentView(R.layout.activity_girltinder_land);
+        } else {
+            setContentView(R.layout.activity_girltinder);
+        }
 
         personasImageView = findViewById(R.id.profileImage);
         name = findViewById(R.id.nameTextView);
