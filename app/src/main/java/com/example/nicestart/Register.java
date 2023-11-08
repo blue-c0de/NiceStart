@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.google.android.material.textfield.TextInputLayout;
-
 public class Register extends AppCompatActivity {
     EditText name, mail, first_pass, confirm_pass;
 
