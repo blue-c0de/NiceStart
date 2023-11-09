@@ -101,6 +101,8 @@
         android:id="@+id/ok"
         style="@style/ok"
         android:text="@string/ok"
+        android:layout_width="0dp"
+        android:backgroundTint="@color/fucsia_200"
         android:onClick="openMain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
