@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- PERMISOS PARA UTILIZAR INTERNET, PARA CARGAR UNA IMAGEN DE URL -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,7 +17,15 @@
         tools:targetApi="34">
         <activity
             android:name=".Splash"
-            android:exported="false" />
+            android:exported="true"
+            android:theme="@style/Theme.NiceStart.Light.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false"
@@ -27,13 +38,8 @@
         <!-- android:theme: EN LOGIN LANZAMOS EL TEMA SIN ACTION BAR -->
         <activity
             android:name=".Login"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.NiceStart.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".BothTinder"
