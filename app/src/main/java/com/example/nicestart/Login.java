@@ -7,6 +7,8 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import com.bumptech.glide.Glide;
 
 public class Login extends AppCompatActivity {
     EditText username, password;
@@ -22,6 +24,10 @@ public class Login extends AppCompatActivity {
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
+
+        // GLIDE PARA FOTOS
+        ImageView mGirl = findViewById(R.id.chica);
+        Glide.with(this).load(R.drawable.girl).into(mGirl);
     }
 
     // METODO PARA EL BOTON LOGIN, ABRE EL REGISTER
