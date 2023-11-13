@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 public class Login extends AppCompatActivity {
     EditText username, password;
@@ -27,7 +29,12 @@ public class Login extends AppCompatActivity {
 
         // GLIDE PARA FOTOS
         ImageView mGirl = findViewById(R.id.chica);
-        Glide.with(this).load(R.drawable.girl).into(mGirl);
+        Glide.with(this)
+                .load(R.drawable.girl)
+                .transition(DrawableTransitionOptions.withCrossFade(2000)) //PARA QUE DURE 2 SEGUNDOS
+                .centerCrop()
+                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200))) // MIENTRAS SE CARGA LA IMAGEN, ME PONE UN FONDO DEL COLOR ESCOGIDO
+                .into(mGirl);
     }
 
     // METODO PARA EL BOTON LOGIN, ABRE EL REGISTER
