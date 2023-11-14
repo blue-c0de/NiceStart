@@ -3,7 +3,7 @@
     <style name="buttonflat">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">60dp</item>
-        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:backgroundTint">@color/button_custom</item>
         <item name="cornerRadius">0dp</item>
         <item name="android:textColor">@color/purple_500</item>
     </style>
@@ -38,5 +38,11 @@
         <item name="android:layout_marginLeft">50dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="img_btn">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">180dp</item>
+        <item name="android:backgroundTint">@color/white</item>
     </style>
 </resources>
