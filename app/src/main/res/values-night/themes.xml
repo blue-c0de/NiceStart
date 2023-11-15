@@ -6,6 +6,6 @@
 
     <!-- TEMA OSCURO SIN BARRA -->
     <style name="Theme.NiceStart.Dark.NoActionBar" parent="Theme.Material3.Dark.NoActionBar">
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 </resources>
