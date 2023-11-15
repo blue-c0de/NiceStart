@@ -33,7 +33,7 @@ This is the Nicestart project, an Android application for user authentication.
 
 ### Branches
 - **Login**: Contains the login functionality.
-- **Registration**: Contains the registration functionality.
+- **Register**: Contains the registration functionality.
 - **Splash**: Contains an initial screen that appears when an app is launched.
 
 ### Activities
