@@ -12,9 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/hipman"
-        android:scaleType="fitStart"
-        android:layout_marginTop="55dp"
-        app:srcCompat="@drawable/hipman" />
+        android:scaleType="fitStart"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_name"

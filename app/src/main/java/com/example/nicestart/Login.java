@@ -33,8 +33,6 @@ public class Login extends AppCompatActivity {
         ImageView mGirl = findViewById(R.id.chica);
         Glide.with(this)
                 .load("https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80")
-                .circleCrop()
-                .centerCrop()
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200))) // MIENTRAS SE CARGA LA IMAGEN, ME PONE UN FONDO DEL COLOR ESCOGIDO
                 .transition(DrawableTransitionOptions.withCrossFade(2000)) //PARA QUE DURE 2 SEGUNDOS
                 .into(mGirl);
