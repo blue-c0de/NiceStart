@@ -5,9 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 
 public class Register extends AppCompatActivity {
     EditText name, mail, first_pass, confirm_pass;
@@ -15,17 +20,21 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
-            setContentView(R.layout.activity_register_land);
-        } else {
-            setContentView(R.layout.activity_register);
-        }
+        setContentView(R.layout.activity_register);
 
         name = findViewById(R.id.name);
         mail = findViewById(R.id.email);
         first_pass = findViewById(R.id.password);
         confirm_pass = findViewById(R.id.password2);
+
+        ImageView mBoy = findViewById(R.id.chico);
+        Glide.with(this)
+                .load(R.drawable.hipman)
+                .circleCrop()
+                .centerCrop()
+                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200))) // MIENTRAS SE CARGA LA IMAGEN, ME PONE UN FONDO DEL COLOR ESCOGIDO
+                .transition(DrawableTransitionOptions.withCrossFade(2000)) //PARA QUE DURE 2 SEGUNDOS
+                .into(mBoy);
     }
 
     public void openMain(View view){

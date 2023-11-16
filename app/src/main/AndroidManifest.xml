@@ -15,10 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NiceStart.Light.ActionBar"
         tools:targetApi="34">
+
         <activity
             android:name=".Splash"
             android:exported="true"
-            android:theme="@style/Theme.NiceStart.Light.NoActionBar">
+            android:theme="@style/Theme.NiceStart.Light.NoActionBar"
+            android:screenOrientation="user">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,37 +28,50 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.NiceStart.Light.NoActionBar" /> <!-- android:theme: LO ADQUIERE DEL APPLICATION -->
+            android:theme="@style/Theme.NiceStart.Light.NoActionBar"
+            android:screenOrientation="user"/>
+
+        <!-- android:theme: LO ADQUIERE DEL APPLICATION -->
         <!-- parentActivityName: DEFINE EL PADRE PARA CUANDO VOLVAMOS ATRAS -->
         <activity
             android:name=".Register"
             android:exported="false"
-            android:parentActivityName=".Login" /> <!-- <intent-filter>: FORZAMOS QUE LANCE PRIMERO EL ACTIVITY QUE LO TENGA -->
+            android:parentActivityName=".Login"
+            android:screenOrientation="user"/>
+
+        <!-- <intent-filter>: FORZAMOS QUE LANCE PRIMERO EL ACTIVITY QUE LO TENGA -->
         <!-- android:theme: EN LOGIN LANZAMOS EL TEMA SIN ACTION BAR -->
         <activity
             android:name=".Login"
             android:exported="false"
-            android:theme="@style/Theme.NiceStart.Light.NoActionBar">
+            android:theme="@style/Theme.NiceStart.Light.NoActionBar"
+            android:screenOrientation="user">
         </activity>
+
         <activity
             android:name=".BothTinder"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="user" />
+
         <activity
             android:name=".GirlTinder"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="user" />
+
         <activity
             android:name=".BoyTinder"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="user"/>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>

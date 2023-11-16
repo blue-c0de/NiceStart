@@ -5,16 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     android:background="@android:color/white"
-    tools:context=".GirlTinder">
+    tools:context=".BoyTinder">
 
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:src="@drawable/girl1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/girl1"
+        android:text="@string/boy1"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -45,7 +43,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +52,7 @@
 
         <Button
             android:id="@+id/smashButton"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
@@ -64,7 +62,7 @@
 
         <Button
             android:id="@+id/passButton"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
