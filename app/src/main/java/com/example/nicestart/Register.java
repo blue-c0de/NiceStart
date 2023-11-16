@@ -26,6 +26,8 @@ public class Register extends AppCompatActivity {
         mail = findViewById(R.id.email);
         first_pass = findViewById(R.id.password);
         confirm_pass = findViewById(R.id.password2);
+
+
     }
 
     public void openMain(View view){
