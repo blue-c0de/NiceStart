@@ -79,29 +79,31 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/till2"
+        app:layout_constraintBottom_toTopOf="@id/button2"
         style="@style/buttonflat" />
 
     <Button
         android:id="@+id/button2"
-        android:text="@string/button2"
+        style="@style/buttonoutlined"
         android:layout_height="60dp"
         android:onClick="openRegister"
+        android:text="@string/button2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
-        style="@style/buttonoutlined" />
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.20" />
+        app:layout_constraintGuide_percent="0.25" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.80" />
+        app:layout_constraintGuide_percent="0.85" />
 </androidx.constraintlayout.widget.ConstraintLayout>

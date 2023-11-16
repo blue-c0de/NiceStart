@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+    <alpha
+        android:duration="600"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite"
+        />
+</set>
+
+<!--
+    android:repeatMode: ESPECIFICA EL COMNPORTAMIENTO CUANDO LA ANIMACION SE REPITE
+        - "reverse": SE REPRODUCE HACIA ATRAS EN CADA REPETICION
+        - "restart": COMIENZA DESDE EL PRINCIPIO EN CADA REPETICION
+    android:repeatCount:
+    - "infinite": INDICA CUANTAS VECES DE DEPE REPETIR
+-->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+    <alpha
+        android:duration="1000"
+        android:fromAlpha="0.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:toAlpha="1.0"/>
+</set>
+
+<!--
+    android:interpolator: INTERPOLADOR - DEFINE COMO VARIA LA ANIMACION EN FUNCION DEL TIEMPO
+        - "@android:anim/accelerate_interpolator": ACELERA LA ANIMACION
+        - "@android:anim/decelerate_interpolator": DESACELERA LA ANIMACION
+        - "@android:anim/accelerate_decelerate_interpolator": ACELERA Y DESACELERA LA ANIMACION
+        - "@android:anim/anticipate_interpolator": ANTICIPA EL MOVIMIENTO
+        - "@android:anim/overshoot_interpolator": PRODUCE UN EFECTO DE REBOTE
+        - "@android:anim/anticipate_overshoot_interpolator": ANTICIPA EL MOVIMIENTO Y PRODUCE UN EFECTO DE REBOTE
+        - "@android:anim/bounce_interpolator": CREA UN EFECTO DE REBOTE AL FINAL
+        - "@android:anim/cycle_interpolator": REPITE LA ANIMACION EN UN CICLO
+        - "@android:anim/linear_interpolator": CAMBIO CONSTANTE A LO LARGO DEL TIEMPO
+-->
