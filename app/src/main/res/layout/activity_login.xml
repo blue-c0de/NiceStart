@@ -16,6 +16,12 @@
         tools:layout_editor_absoluteY="0dp"
         android:contentDescription="@string/girl"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.9"
+        android:background="@drawable/gradient_login"/>
+
     <ImageView
         android:id="@+id/rayo"
         android:layout_width="80dp"
