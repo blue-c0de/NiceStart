@@ -20,12 +20,7 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
-            setContentView(R.layout.activity_register);
-        } else {
-            setContentView(R.layout.activity_register);
-        }
+        setContentView(R.layout.activity_register);
 
         name = findViewById(R.id.name);
         mail = findViewById(R.id.email);
