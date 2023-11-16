@@ -50,7 +50,7 @@
         tools:layout_editor_absoluteX="16dp">
 
         <Button
-            android:id="@+id/smashButton"
+            android:id="@+id/passButton"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginEnd="8dp"
@@ -60,7 +60,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/passButton"
+            android:id="@+id/smashButton"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
