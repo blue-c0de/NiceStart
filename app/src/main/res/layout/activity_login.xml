@@ -11,16 +11,18 @@
         android:id="@+id/chica"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitStart"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:contentDescription="@string/girl"/>
+        android:contentDescription="@string/girl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.9"
-        android:background="@drawable/gradient_login"/>
+        android:background="@drawable/gradient_login" />
 
     <ImageView
         android:id="@+id/rayo"

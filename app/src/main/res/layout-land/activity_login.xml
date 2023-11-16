@@ -5,43 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_login"
-    android:orientation="horizontal"
     tools:context=".Login">
 
     <ImageView
         android:id="@+id/chica"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitStart"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        app:srcCompat="@drawable/girl"
-        android:contentDescription="@string/girl"/>
+        android:contentDescription="@string/girl"
+        app:layout_constraintEnd_toStartOf="@+id/rayo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:background="@drawable/gradient_login" />
 
     <ImageView
         android:id="@+id/rayo"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_thunder"
-        android:contentDescription="@string/rayo"/>
+        android:contentDescription="@string/rayo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/till1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toStartOf="@id/till2"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/rayo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
         app:startIconDrawable="@drawable/usericon">
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:autofillHints="username"
             android:background="@color/white"
@@ -53,16 +54,14 @@
         android:id="@+id/till2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toEndOf="@+id/till1"
-        app:layout_constraintTop_toBottomOf="@+id/rayo"
+        app:layout_constraintTop_toBottomOf="@+id/till1"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/keyicon">
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:autofillHints="password"
             android:background="@color/white"
@@ -78,20 +77,16 @@
         android:onClick="openMain"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/till2"
-        app:layout_constraintBottom_toTopOf="@id/button2"
-        style="@style/buttonflat" />
+        style="@style/buttonflatLand" />
 
     <Button
         android:id="@+id/button2"
-        style="@style/buttonoutlined"
+        style="@style/buttonoutlinedLand"
         android:layout_height="60dp"
         android:onClick="openRegister"
         android:text="@string/button2"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -99,12 +94,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.9" />
 </androidx.constraintlayout.widget.ConstraintLayout>
