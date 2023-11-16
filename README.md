@@ -13,6 +13,8 @@ NiceStart es una aplicación Android para la autenticación de usuarios.
 - **Splash**: Contiene una pantalla inicial que aparece cuando se lanza la aplicación.
 
 ### Capturas
+![Splash Screen](img/splash.png)
+![Splash Land Screen](img/splash_land.png)
 ![Pantalla Login](img/login.png)
 ![Pantalla Login Land](img/login_land.png)
 ![Pantalla Register](img/register.png)
@@ -41,6 +43,8 @@ This is the Nicestart project, an Android application for user authentication.
 - **RegisterActivity**: Allows users to register.
 
 ### Screenshots
+![Splash Screen](img/splash.png)
+![Splash Land Screen](img/splash_land.png)
 ![Login Screen](img/login.png)
 ![Login Land Screen](img/login_land.png)
 ![Register Screen](img/register.png)
