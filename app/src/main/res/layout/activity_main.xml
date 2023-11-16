@@ -51,8 +51,7 @@
 
         <ImageView
             android:id="@+id/imageView"
-            style="@style/img_main"
-            android:src="@drawable/man" />
+            style="@style/img_main" />
     </LinearLayout>
 
     <LinearLayout
@@ -75,8 +74,7 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            style="@style/img_main"
-            android:src="@drawable/woman"/>
+            style="@style/img_main"/>
     </LinearLayout>
 
     <LinearLayout
@@ -99,7 +97,6 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:src="@drawable/dog"
             style="@style/img_main" />
     </LinearLayout>
 

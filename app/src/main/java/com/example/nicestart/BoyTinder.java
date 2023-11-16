@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+
 import java.util.Random;
 
 public class BoyTinder extends AppCompatActivity {
@@ -25,14 +27,13 @@ public class BoyTinder extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
-            setContentView(R.layout.activity_boytinder_land);
-        } else {
-            setContentView(R.layout.activity_boytinder);
-        }
+        setContentView(R.layout.activity_boytinder);
 
         personasImageView = findViewById(R.id.profileImage);
+        Glide.with(this)
+                .load(R.drawable.boy1)
+                .into(personasImageView);
+
         name = findViewById(R.id.nameTextView);
         desc = findViewById(R.id.bioTextView);
         smashButton = findViewById(R.id.smashButton);
@@ -44,7 +45,10 @@ public class BoyTinder extends AppCompatActivity {
                 // Generar un nuevo índice aleatorio
                 int randomIndex = new Random().nextInt(imageResources.length);
                 Toast.makeText(BoyTinder.this, "Smash!", Toast.LENGTH_SHORT).show();
-                personasImageView.setImageResource(imageResources[randomIndex]);
+
+                Glide.with(BoyTinder.this)
+                        .load(imageResources[randomIndex])
+                        .into(personasImageView);
                 name.setText(names[randomIndex]);
                 desc.setText(bios[randomIndex]);
             }
@@ -56,7 +60,10 @@ public class BoyTinder extends AppCompatActivity {
                 // Generar un nuevo índice aleatorio
                 int randomIndex = new Random().nextInt(imageResources.length);
                 Toast.makeText(BoyTinder.this, "Pass!", Toast.LENGTH_SHORT).show();
-                personasImageView.setImageResource(imageResources[randomIndex]);
+
+                Glide.with(BoyTinder.this)
+                        .load(imageResources[randomIndex])
+                        .into(personasImageView);
                 name.setText(names[randomIndex]);
                 desc.setText(bios[randomIndex]);
             }
