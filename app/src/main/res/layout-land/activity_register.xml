@@ -8,11 +8,16 @@
     tools:context=".Register">
 
     <ImageView
-        android:id="@+id/chica"
+        android:id="@+id/chico"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/hipman"
         android:scaleType="fitStart"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:background="@drawable/gradient_login"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_name"
@@ -101,7 +106,6 @@
     <Button
         android:id="@+id/ok"
         style="@style/ok"
-        android:fontFamily="@font/varela_round"
         android:onClick="openMain"
         android:text="@string/ok"
         app:layout_constraintBottom_toBottomOf="parent"
