@@ -9,17 +9,17 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-// METODOS ESTATICOS PARA CARGAR Y CREAR ANIMACIONES A PARTIR DE XML.
-import android.view.animation.AnimationUtils;
-// REALIZA ANIMACION DE ROTACION EN UNA VISTA. SE ESPECIFICA PUNTO CENTRAL, ANGULO INICIAL Y FINAL.
-import android.view.animation.RotateAnimation;
-// REALIZA ANIMACION DE ESCALA EN UNA VISTA. SE ESPECIFICA PUNTO CENTRAL, ANCHURA Y ALTURA.
-import android.view.animation.ScaleAnimation;
-// REALIZA ANIMACION DE TRANSLACION EN UNA VISTA. SE ESPECIFICA DISTANCIA A LARGO DEL EJE X Y EL EJE Y.
-import android.view.animation.TranslateAnimation;
+// PERMITE CARGAR Y REPRODUCIR ANIMACIONES LOTTIE
+import com.airbnb.lottie.LottieAnimationView;
+// PERMITE CONTROLAR LA REPRODUCION, PAUSA, REANUDACION DE LA ANIMACION
+import com.airbnb.lottie.LottieDrawable;
+// PROPORCIONA METODOS PARA CREAR COMPOSICIONES DE UN ARCHIVO LOTTIE
+import com.airbnb.lottie.LottieCompositionFactory;
+
+
 
 public class Splash extends AppCompatActivity {
-    private ImageView logo;
+    private LottieAnimationView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,19 +27,9 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         openApp(); //ABRIR LA APLICACION
 
-        logo = findViewById(R.id.logo);
-        Glide
-                .with(this)
-                .load(R.mipmap.beso)
-                .transition(DrawableTransitionOptions.withCrossFade(2000))
-                .centerCrop()
-                .into(logo);
-
-        // SE CREA UN OBJETO PARA LA ANIMACION
-        Animation scale = AnimationUtils.loadAnimation(this, R.anim.scale_animation1);
-
-        // ANIMACION AL WIDGET DE LA INTERFAZ
-        logo.startAnimation(scale);
+        logo = findViewById(R.id.animation_view);
+        logo.setAnimation(R.raw.love);
+        logo.playAnimation();
     }
 
     private void openApp() {

@@ -7,11 +7,18 @@
     tools:context=".Splash"
     android:background="@drawable/gradient_login">
 
-    <ImageView
-        android:id="@+id/logo"
+    <!-- LOTTIE ANIMATION
+        app:lottie_loop: BUCLE INFINITO
+        app:lottie_autoPlay: EMPIEZA A MOSTRARLO, LO MAS PRONTO QUE LA ANIMACION ESTA CARGADA
+    -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/img_btn" />
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>
