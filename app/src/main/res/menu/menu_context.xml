@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.nicestart.MainActivity">
+    <!--
+        app:showAsAction="always|withText": MOSTRAR SIEMPRE COMO ELEMENTO DE ACCION EN LA BARRA DE ACCIONES CON TEXTO
+            - always: ELEMENTO DE MENU DEBE MOSTRARSE COMO UN ICONO EN LA BARRA DE ACCIONES
+            - withText: SI ES POSIBLE. EL TEXTO DEBE MOSTRARSE
+     -->
+    <item
+        android:id="@+id/borrar"
+        android:title="Borrar"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/bloquear"
+        android:title="Bloquear"
+        app:showAsAction="always|withText"/>
+</menu>

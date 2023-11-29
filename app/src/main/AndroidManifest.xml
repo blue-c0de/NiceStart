@@ -14,9 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NiceStart.Light.ActionBar"
         tools:targetApi="34">
+
+        <activity
+            android:name=".Mensaje"
+            android:theme="@style/Theme.NiceStart.Light.NoActionBar"
+            android:parentActivityName=".NoPeople"
+            android:exported="false" />
+
         <activity
             android:name=".NoPeople"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.NiceStart.Light.NoActionBar" />
 
         <activity
             android:name=".Splash"
@@ -25,7 +33,6 @@
             android:theme="@style/Theme.NiceStart.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -33,8 +40,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:screenOrientation="user"
-            android:theme="@style/Theme.NiceStart.Light.NoActionBar" />
+            android:screenOrientation="user" />
 
         <!-- android:theme: LO ADQUIERE DEL APPLICATION -->
         <!-- parentActivityName: DEFINE EL PADRE PARA CUANDO VOLVAMOS ATRAS -->
@@ -50,7 +56,7 @@
             android:name=".Login"
             android:exported="false"
             android:screenOrientation="user"
-            android:theme="@style/Theme.NiceStart.Light.NoActionBar"/>
+            android:theme="@style/Theme.NiceStart.Light.NoActionBar" />
 
         <activity
             android:name=".BothTinder"
@@ -74,5 +80,4 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>
