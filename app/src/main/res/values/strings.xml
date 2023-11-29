@@ -47,4 +47,18 @@
     <string name="gen2">CHICOS</string>
     <string name="gen3">AMBOS</string>
     <string name="main_desc">Escoge según tus preferencias</string>
+
+    <!-- NO PEOPLE -->
+    <string-array name="names_array">
+        <item>Elena Ferrer</item>
+        <item>Maria Fernandez</item>
+        <item>Laura Gomez</item>
+        <item>Carla Pérez</item>
+        <item>Sofía Vargas</item>
+        <item>Juan Mendez</item>
+        <item>Kevin Lozano</item>
+        <item>David Rodríguez</item>
+        <item>Juan Martínez</item>
+        <item>Gabriel Torres</item>
+    </string-array>
 </resources>

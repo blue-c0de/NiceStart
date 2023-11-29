@@ -1,49 +1,72 @@
 package com.example.nicestart;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.os.Bundle;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.widget.Toast;
+import com.example.nicestart.R;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class NoPeople extends AppCompatActivity {
-    private WebView miVisorWeb;
+    private int currentIndex = 0;
     private SwipeRefreshLayout miSwipe;
+    private ListView list;
+    static String NOMBRE ="";
+    static int IMAGEN;
+    private int[] imageResources = {R.drawable.girl1, R.drawable.girl2, R.drawable.girl3, R.drawable.girl4, R.drawable.girl5, R.drawable.boy1, R.drawable.boy2, R.drawable.boy3, R.drawable.boy4, R.drawable.boy5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_no_people);
 
-        miVisorWeb = findViewById(R.id.vistaweb);
         miSwipe = findViewById(R.id.swipe);
+        list = findViewById(R.id.listView);
+
+        String[] namesArray = getResources().getStringArray(R.array.names_array);
+        ArrayList<String> nombresArray = new ArrayList<>();
+        nombresArray.add(namesArray[0]);
+
+        // ADAPTADOR: TOMA DATOS Y LOS ORGANIZA
+        final ArrayAdapter<String>[] adapter = new ArrayAdapter[]{new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, nombresArray)};
+        list.setAdapter(adapter[0]);
 
         // ESTABLECE UN ESCUCHADOR PARA EL GESTO "SWIPE TO REFRESH"
-        miSwipe.setOnRefreshListener(mOnRefreshListener);
+        miSwipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                if (currentIndex < namesArray.length - 1) {
+                    currentIndex++;
+                    nombresArray.add(namesArray[currentIndex]);
+                    adapter[0] = new ArrayAdapter<>(NoPeople.this, android.R.layout.simple_list_item_1, nombresArray);
+                    list.setAdapter(adapter[0]);
+                }
 
-        // OBTIENE LA CONFIGURACIÓN DE WebView
-        WebSettings wS = miVisorWeb.getSettings();
-        // CONFIGURA LA CARGA CON VISTA GENERAL
-        wS.setLoadWithOverviewMode(true);
-        // CONFIGURA EL USO DE UN PUERTO ANCHO
-        wS.setUseWideViewPort(true);
-        // CARGA LA URL EN WebView
-        miVisorWeb.loadUrl("https://thispersondoesnotexist.com");
+                // Stop the swipe animation
+                miSwipe.setRefreshing(false);
+            }
+        });
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(NoPeople.this, Mensaje.class);
+
+                // OBTENER EL NOMBRE SELECCIONADO
+                NOMBRE = nombresArray.get(position);
+                IMAGEN = imageResources[position];
+
+                intent.putExtra("NOMBRE", NOMBRE);
+                intent.putExtra("IMAGEN", IMAGEN);
+                startActivity(intent);
+            }
+        });
     }
-
-    // METODO LLAMADO AL REALIZAR EL GESTO
-    protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
-        @Override
-        public void onRefresh() {
-            // MUESTRA UN TOAST CON UN MENSAJE
-            Toast toast = Toast.makeText(NoPeople.this, "Hi there! I dont exist :", Toast.LENGTH_LONG);
-            toast.show();
-            // RECARGA LA PÁGINA EN WebView
-            miVisorWeb.reload();
-            // DETIENE LA ANIMACIÓN DE "SWIPE TO REFRESH"
-            miSwipe.setRefreshing(false);
-        }
-    };
 }
