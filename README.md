@@ -34,7 +34,7 @@ NiceStart es una aplicación Android para la autenticación de usuarios.
 ![Pantalla NoPeople Land](img/nopeople_land.png)
 ![Pantalla Mensajes](img/mensajes.png)
 ![Pantalla Mensajes Land](img/mensajes_land.png)
-![Video Animaciones](video/anim.webm)
+[anim.webm](video/anim.webm)
 
 ### Estilo
 Hemos personalizado la apariencia de la aplicación usando estilos y temas definidos en `res/values/styles.xml`. Para más detalles, por favor revisa el código y comentarios en las actividades correspondientes.
@@ -76,7 +76,7 @@ This is the Nicestart project, an Android application for user authentication.
 ![NoPeople Land  Screen](img/nopeople_land.png)
 ![Message Screen](img/mensajes.png)
 ![Message Land Screen](img/mensajes_land.png)
-![Animation Video](video/anim.webm)
+[anim.webm](video/anim.webm)
 
 ### Styling
 We have customized the app's appearance using styles and themes defined in `res/values/styles.xml`. For more details, please check the code and comments in the corresponding activities.
